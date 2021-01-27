@@ -17,7 +17,7 @@
        * Input: csv file path, manually change the range of W,L,T
        * Output: A heatmap plot telling the most linear configuration of W/L 
 
-* R2_optimizer
+* VVDDTC2_optimizer
 
      A script telling the optimized sizing value and lowest 2nd order TC for 2T+Header(Gate connection)  
 
