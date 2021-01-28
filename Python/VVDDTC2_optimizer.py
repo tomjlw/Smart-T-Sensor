@@ -26,7 +26,7 @@ for i in range(0, len(raw)):
 
 data = np.array(data).astype(np.float)	
 T = np.array(T).astype(np.float)	
-coeffs = np.polyfit(T,data,2)
+coeffs = np.abs(np.polyfit(T,data,2))
 min_TC2 = min(coeffs[0, :])
 opt_index = int(np.where(coeffs==min_TC2)[1])
 
