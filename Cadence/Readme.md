@@ -7,4 +7,4 @@
   * Return the R2(i.e. linearity) score of wave objects 
 
 * rsq_mean.ils
-  * Return the mean R2 across specified number of corners, used in optimization only   
+  * Return the mean R2 across specified number of corners, used in optimization only(currently need to change the specified number manually in the scripts)   
