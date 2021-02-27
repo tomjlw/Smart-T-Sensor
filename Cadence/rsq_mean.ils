@@ -157,14 +157,13 @@ SCCS Info: @(#) abBestFit.ils 06/11/20.12:22:29 1.3
   *             last x points of the input waveform              *
   *                                                              *
   ***************************************************************/
-  (defglobalfun rsq_mean (wave)
+  (defglobalfun rsq_mean (wave ncorner)
     (cond
       ((drIsWaveform wave)
-       (let (rawxVec rawyVec xVec yVec len firstX lastX newXVec newYVec newWave nsum rss rsq tmppsum ncorner rsq_mean)
+       (let (rawxVec rawyVec xVec yVec len firstX lastX newXVec newYVec newWave nsum rss rsq tmppsum rsq_mean)
          ;---------------------------------------------------------------
          ; Compute slope and intercept of best fit line
          ;---------------------------------------------------------------
-		(setq ncorner 5)
          (setq rawxVec (drGetWaveformXVec wave))
          (setq rawyVec (drGetWaveformYVec wave))
          (when (eq (drGetWaveformYType wave) 'doublecomplex)
