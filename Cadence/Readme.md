@@ -10,10 +10,10 @@
   * Return the R2(i.e. linearity) score of wave objects 
   * Example usage: 
   
-  ```rsq(fitting_values)```
+    ```rsq(fitting_values)```
 
 * rsq_mean.ils
   * Return the mean R2 across specified number of corners, used in optimization only
   * Example usage: 
     
-  ```rsq_mean(fitting_values number_of_corner)``` 
+    ```rsq_mean(fitting_values number_of_corner)``` 
