@@ -35,3 +35,19 @@
        * Input: csv file path 
        * Output: optimized 2nd TC value & corresponding sizing configuration  
 
+* VVDD_Construct
+
+     A script combing rofreq value from different assigned VVDD for different corners
+  
+  * Usage
+    * Simulation
+       * Linear sweeping of VVDD
+
+     * Internal Cadence csv file
+       * T as row
+       * Using leafvalue function to extract frequency one by one VVDD
+       * Put in an Excel, just a chunk of data with dimension (N_VVDD, N_TK, N_Corner) no spacing needed 
+     
+     * External Python script
+       * Input: csv file path, some constatnt determining spacing of VVDD, VVDD @ TT and N_TK
+       * Output: Overall sigma value     
