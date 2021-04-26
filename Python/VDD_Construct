@@ -11,8 +11,8 @@ VDD_min = 0.2
 VDD_max = 0.4
 TK_min = 273
 TK_max = 373
-TT_VDD = 0.35
-diff_VDD = 0.02 # the VDD variation values across corners
+TT_VDD = 0.26
+diff_VDD = 0.00 # the VDD variation values across corners
 file_name = "VDD_Construct.csv"
 
 
@@ -38,7 +38,7 @@ TK_repeat = np.array(np.repeat(TK_list, 5, axis=0)).reshape(N_TK,5)
 
 VDD_idx = [round((element-VDD_min)/(VDD_list[1]-VDD_list[0]))
  for element in [TT_VDD,FF_VDD,FS_VDD, SS_VDD, SF_VDD]] 	# determine the index corresponding to assignedVVDD
-constructed_data = np.array([raw_data[idx, :, VDD_idx.index(idx)] for idx in VDD_idx]).T # construct new dataset
+constructed_data = np.array([raw_data[idx, :, corner_idx] for corner_idx, idx in enumerate(VDD_idx)]).T # construct new dataset
 
 # Translation of original matlab script calculating  overal sigma
 Process = np.around(np.array([TK_list*np.log(constructed_data[:, i]).T for i in range(0, constructed_data.shape[1])]).T, decimals=0)
@@ -53,5 +53,6 @@ error_after_fitting = error - np.polyval(FF, TK_repeat)
 std = np.std(error_after_fitting, axis=1)
 average = np.mean(error_after_fitting, axis=1) 
 overall_sigma = np.max(average+3*std)-np.min(average-3*std)
+
 print(std)
 print(overall_sigma)
