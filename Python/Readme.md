@@ -44,7 +44,7 @@
        * Linear sweeping of VVDD
 
      * Internal Cadence csv file
-       * T as row
+       * T as row with first line as header indicating corner
        * Using leafvalue function to extract frequency one by one VVDD
        * Put in an Excel, just a chunk of data with dimension (N_VVDD, N_TK, N_Corner) no spacing needed 
      
