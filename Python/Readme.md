@@ -51,3 +51,19 @@
      * External Python script
        * Input: csv file path, some constatnt determining spacing of VVDD, VVDD @ TT and N_TK
        * Output: Overall sigma value     
+
+* res_readout
+
+     A script displaying dashboard of relationship between design parameters for readout and resolution
+  
+  * Usage
+    * Simulation
+       * Linear sweeping of VVDD
+
+     * Internal Cadence csv file
+       * T as row with first line as header indicating corner
+       * Put in an Excel, just a chunk of data with dimension (N_VVDD, N_TK, N_Corner) no spacing needed 
+     
+     * External Python script
+       * Input: csv file path
+       * Output: Dashboard help determine #total and #sample
