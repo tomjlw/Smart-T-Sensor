@@ -67,3 +67,19 @@
      * External Python script
        * Input: csv file path
        * Output: Dashboard help determine #total and #sample
+
+* error_plot
+
+     A script calculating the 3-sigma as temperature sensor's accuracy
+  
+  * Usage
+    * Simulation
+       * Linear sweeping of VVDD
+
+     * Internal Cadence csv file
+       * T as row with first line as header indicating corner
+       * Put in an Excel, just a chunk of data with dimension (N_VVDD, N_TK, N_Corner) no spacing needed 
+     
+     * External Python script
+       * Input: csv file path
+       * Output: 3sigma value
