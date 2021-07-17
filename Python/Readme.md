@@ -83,3 +83,16 @@
      * External Python script
        * Input: csv file path
        * Output: 3sigma value
+       
+* FOM_plot
+
+     A script generates a FOM graph used in paper
+  
+  * Usage
+    * Source file
+       * Download Makinwwa's famous Tsensor survey
+     
+     * External Python script
+       * Input: survey file path, user-defined fiter condition & graph details
+       * Output: FOM graph
+
