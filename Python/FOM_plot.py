@@ -17,7 +17,7 @@ pd_total = []
 # Merge all data in Tsensor_survey.xlsx by Makinwwa 
 all_sheet = pd.ExcelFile(path)
 related_sheet = [all_sheet.sheet_names[i] for i in range(1, 5)]
-raw_data_pd = pd.concat([pd.read_excel(path, sheet_name=related_sheet[i]).dropna(subset=['Type']) 
+raw_data_pd = pd.concat([pd.read_excel(path, sheet_name=related_sheet[i]).dropna(subset=['Year']) 
 	for i in range(0, 4)], join="inner", ignore_index=1) # drop empty rows
 
 # Categorize Sensors
