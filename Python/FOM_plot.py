@@ -17,8 +17,7 @@ for font_file in font_files:
 		font_manager.fontManager.addfont(font_file)
 
 plt.rcParams['font.size'] = 12
-plt.rcParams['font.family'] = 'sans-serif'
-plt.rcParams['font.sans-serif'] = ['Arial Narrow']+ plt.rcParams['font.sans-serif']
+plt.rcParams['font.family'] = 'Arial Narrow'
 
 # Main Part Begins
 path ='TSensor_survey.xlsx'
@@ -229,7 +228,7 @@ plt.xscale("log")
 plt.xticks(np.logspace(-3.0, 4.0, num=8))
 plt.yticks(np.arange(0, 10, 0.8))
 plt.ylabel("Accuracy [°C]")
-plt.xlabel("power [uW]")
+plt.xlabel("Power [uW]")
 plt.legend(newHandles, newLabels, loc="upper right")
 plt.grid()
 plt.tight_layout()
