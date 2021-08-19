@@ -5,12 +5,28 @@ import csv
 import math
 from adjustText import adjust_text
 from numpy.random import *
+from matplotlib import font_manager
+
 pd.set_option("display.max_rows", None, "display.max_columns", None)
 
+# Change Font to Arial Narrow
+font_dirs = ['./']
+font_files = font_manager.findSystemFonts(fontpaths=font_dirs)
+
+for font_file in font_files:
+		font_manager.fontManager.addfont(font_file)
+
+plt.rcParams['font.size'] = 12
+plt.rcParams['font.family'] = 'serif'
+plt.rcParams['font.sans-serif'] = ['Arial Narrow']
+
+# Main Part Begins
 path ='TSensor_survey.xlsx'
 shape_color_map = {"BJT":"or", "Resistor":"^g", "MOS":"sb", "TD":"Dc", "MEMS":"Pm", "Yang": "k*", "Jiang": "m*"} # "shape,color"
 myspec = {"Author": "L. Jiang", 'PP IA [°C]': 0.6, "Res [mK]": 100, "R-FOM": 0.013, "uW": 0.04, "Area [mm2]": 0.038, 
 "Year": 2021, "nJ": 1.3, "Source": "ISSCC"} # specifications for current work
+myspec = {"Author": "L. Jiang", 'PP IA [°C]': 0.6, "Res [mK]": 100, "R-FOM": 0.00443, "uW": 0.0145, "Area [mm2]": 0.038, 
+"Year": 2021, "nJ": 0.4, "Source": "ISSCC"} # specifications for current work
 measured = 1
 filterdict = {"Acc": 10, "Res": 1e9, "Pow": 1e9, "Ene": 1e9, "Are": 1e9, "Yea": 0}
 annotation = 0
@@ -121,7 +137,7 @@ for handle, label in zip(handles, labels):
 
 plt.xscale("log")
 plt.xticks(np.logspace(-3.0, 4.0, num=8))
-plt.yticks(np.arange(0, 10, 0.8))
+plt.yticks(np.arange(0, 8, 0.8))
 plt.ylabel("Accuracy [°C]")
 plt.xlabel("Power [uW]")
 plt.legend(newHandles, newLabels, loc="upper right")
@@ -192,7 +208,7 @@ plt.tight_layout()
 plt.figure()
 ax = plt.subplot(1,1,1)
 YSPEC = "PP IA [°C]"
-XSPEC = "Area [mm2]"
+XSPEC = "uW"
 Y = raw_data_pd[YSPEC].tolist()
 X = raw_data_pd[XSPEC].tolist()
 for i in range(0, len(X)):
@@ -205,17 +221,15 @@ for i in range(0, len(X)):
 handles, labels = plt.gca().get_legend_handles_labels()
 newLabels, newHandles = [], []
 for handle, label in zip(handles, labels):
-	if label not in newLabels:
-		newLabels.append(label)
-		newHandles.append(handle)
+  if label not in newLabels:
+    newLabels.append(label)
+    newHandles.append(handle)
 
 plt.xscale("log")
-#plt.xticks(np.logspace(-3.0, 5.0, num=9))
-#plt.yticks(np.arange(0, 10, 0.8))
+plt.xticks(np.logspace(-3.0, 4.0, num=8))
+plt.yticks(np.arange(0, 10, 0.8))
 plt.ylabel("Accuracy [°C]")
-#plt.yscale("log")
-#plt.yticks(np.logspace(-2.0, 4.0, num=7))
-plt.xlabel("Area [mm2]")
+plt.xlabel("Power [uW]")
 plt.legend(newHandles, newLabels, loc="upper right")
 plt.grid()
 plt.tight_layout()
