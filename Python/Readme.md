@@ -95,4 +95,15 @@
      * External Python script
        * Input: survey file path, user-defined fiter condition & graph details
        * Output: FOM graph
+   
+* sigma_fin
 
+     A script calculate the accuracy(this is the script used in final testing process)
+  
+  * Usage
+    * Source file
+       * Log files created by Labview
+     
+     * External Python script
+       * Input: survey file path, user-defined fiter condition & graph details
+       * Output: raw data that will be later processed by Matlab script
