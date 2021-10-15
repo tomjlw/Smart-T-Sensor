@@ -98,7 +98,7 @@
    
 * sigma_fin
 
-     A script calculate the accuracy(this is the script used in final testing process)
+     A script extracting labview log files, used together with Matlab script to calculate the accuracy(this is the script used in final testing process)
   
   * Usage
     * Source file
@@ -106,4 +106,4 @@
      
      * External Python script
        * Input: list of survey file path
-       * Output: raw data that will be later processed by Matlab script
+       * Output: raw data in correct format that will be later processed by Matlab script
