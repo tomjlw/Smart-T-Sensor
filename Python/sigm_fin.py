@@ -18,16 +18,7 @@ random.seed(2)
 N_sample = 1100
 num_counter = 100
 #path = "SIM7.csv"
-#paths = ["chip7_DUT2_55_18v.txt", "chip8_DUT2_55_18v.txt", "chip3_DUT2_55_18v.txt","chip4_DUT2_55_18v.txt","chip11_DUT2_55_18v.txt","chip12_DUT2_55_18v.txt","chip9_DUT2_55_18v.txt","chip9_DUT2_55_18v.txt"]
-paths = ["chip8_DUT2_55_18v.txt","chip4_DUT2_55_18v.txt","chip11_DUT2_55_18v.txt","chip9_DUT2_55_18v.txt","chip12_DUT2_55_18v.txt","chip16_DUT2_55_18v.txt","chip1_DUT2_55_18v.txt","chip2_DUT2_55_18v.txt","chip3_DUT2_55_18v.txt"]
-#paths = ["chip1_DUT2_55_18v.csv","chip2_DUT2_55_18v.csv","chip3_DUT2_55_18v.csv","chip4_DUT2_55_18v.csv","chip5_DUT2_55_18v.csv","chip6_DUT2_55_18v.csv" ]
-#paths = ["chip1_DUT2_55_18v.csv", "chip1_DUT2_55_18v.txt", "chip2_DUT2_55_18v.txt", "chip7_DUT2_55_18v.txt", "chip8_DUT2_55_18v.txt", "chip3_DUT2_55_18v.txt","chip4_DUT2_55_18v.txt","chip11_DUT2_55_18v.txt", "chip16_DUT2_55_18v.txt"]
-#paths = ["chip7_DUT2_55_18v.txt","chip8_DUT2_55_18v.txt","chip9_DUT2_55_18v.txt", "chip12_DUT2_55_18v.txt", "chip11_DUT2_55_18v.txt"]
-paths = ["chip2_DUT11_55_18v.txt","chip6_DUT11_55_18v.txt","chip11_DUT11_55_18v.txt", "chip9_DUT11_55_18v.txt", "chip12_DUT11_55_18v.txt","chip1_DUT11_55_18v.txt","chip14_DUT11_55_18v.txt"] #o
-paths = ["chip2_DUT11_55_18v.txt","chip6_DUT11_55_18v.txt","chip11_DUT11_55_18v.txt","chip12_DUT11_55_18v.txt","chip8_DUT2_55_18v.txt","SIM2.txt"] #o
-#paths = ["./fn_new/chip1_DUT11.txt","./fn_new/chip2_DUT11.txt","./fn_new/chip6_DUT11.txt", "./fn_new/chip7_DUT11.txt", "./fn_new/chip8_DUT11.txt", "./fn_new/chip9_DUT11.txt","./fn_new/chip11_DUT11.txt","./fn_new/chip12_DUT11.txt"]
-paths =["./fn_new4/chip1.txt","./fn_new4/chip2.txt","./fn_new4/chip6.txt","./fn_new4/chip7.txt","./fn_new4/chip8.txt","./fn_new4/chip9.txt","./fn_new4/chip11.txt","./fn_new4/chip12.txt"] #o
-#paths =["./fn4/chip1.txt","./fn4/chip7.txt","./fn4/chip6.txt","./fn4/chip8.txt","./fn4/chip11.txt","./fn_new4fn/chip9.txt","./fn_new4fn/chip12.txt","./fn_new4fn/chip2.txt",] 
+
 paths = ["./debug/chip11_27.txt","./debug/chip11_55.txt","./debug/chip11_90.txt"] # debug
 def filter_data(raw, filterTK):
 	idx = []
