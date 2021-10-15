@@ -105,5 +105,5 @@
        * Log files created by Labview
      
      * External Python script
-       * Input: survey file path, user-defined fiter condition & graph details
+       * Input: list of survey file path
        * Output: raw data that will be later processed by Matlab script
