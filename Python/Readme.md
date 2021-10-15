@@ -107,3 +107,7 @@
      * External Python script
        * Input: list of survey file path
        * Output: raw data in correct format that will be later processed by Matlab script
+     
+* error3.py
+
+     A helper function that will calculate the accuracy(no longer used but still need to place it under the same folder as sigma_fin)
